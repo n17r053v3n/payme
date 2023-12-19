@@ -1,38 +1,20 @@
-# create-svelte
+# Payme
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+SvelteKit application for setteling debts amongst friends. Remember that there is no DB so use with localstorage enabled.
 
-## Creating a project
+## Code
 
-If you're seeing this, you've probably already done this step. Congrats!
+`/src/lib/scripts/transactions` and `/src/lib/scripts/users` are svelte stores and handle user and transaction data
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+`/src/lib/scripts/types` hold the application types
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+`/src/lib/scripts/calculate` hodls the algoryhm to settle up
 
-## Developing
+`/src/lib/components` holds UI component files
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+`/src/routes/+page.svelte` is the backbone landing page file
 
-```bash
-npm run dev
+to run the project locally run `npm run dev` node v18.17.1 should work 100% and anything v16+ except for 17.X versions shoudl work
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+The project is online at https://payme-8uh.pages.dev/
 
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.

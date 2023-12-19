@@ -1,16 +1,8 @@
 <script lang="ts">
-	import CreateTransaction from '$lib/components/CreateTransaction.svelte';
-	import CreateUser from '$lib/components/CreateUser.svelte';
 	import Transactions from '$lib/components/sections/Transactions.svelte';
 	import Users from '$lib/components/sections/Users.svelte';
-	import { manageTransactions } from '$lib/scripts/transactions';
-	import { manageUsers } from '$lib/scripts/users';
-	import getFinals from '$lib/scripts/calculate';
-	import type { Finals } from '$lib/scripts/types';
-	import Balance from '$lib/components/sections/Balance.svelte';
 
-	// $: console.log($manageUsers);
-	// $: console.log($manageTransactions);
+	import Balance from '$lib/components/sections/Balance.svelte';
 </script>
 
 <div class="flex flex-row gap-4 pt-8 px-wrap2xl">
@@ -22,3 +14,5 @@
 		<Transactions />
 	</div>
 </div>
+
+<svelte:head><title>Payme</title></svelte:head>
